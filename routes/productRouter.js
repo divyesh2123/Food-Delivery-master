@@ -8,7 +8,7 @@ import { isAuth } from "../utlis.js";
 const productRouter = express.Router();
 
 productRouter.get('/',expressAsyncHandler(async(req,res)=>{
-  const products = await Product.find({category:req.query.category}) //return all products
+  const products = await Product.find({}) //return all products
   res.send(products)
 }));
 
